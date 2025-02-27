@@ -7,7 +7,7 @@ const TaskInput = () => {
     const [taskName, setTaskName] = useState('')
     const [projectName, setProjectName] = useState('')
     const [priority, setPriority] = useState<number>(1)
-    const [error, setError] = useState<boolean>(false)
+    // const [error, setError] = useState<boolean>(false)
     const handleToDo = () => {
         setToDo([...toDo, {taskName, projectName, priority}])
         setTaskName('')
@@ -20,7 +20,7 @@ const TaskInput = () => {
     <div className='bg-white flex rounded-lg gap-2 p-4 py-2 flex-col justify-between  w-[500px]'>
         <span>
             <input required value={taskName} onInput={(e) => { setTaskName((e.target as HTMLInputElement).value)}} type='text' placeholder='Enter a task' className='border-2 border-gray-300 rounded-lg p-2' />
-            <input required value={taskName} onInput={(e) => { setTaskName((e.target as HTMLInputElement).value)}} type='text' placeholder='Enter a task' className='border-2 border-gray-300 rounded-lg p-2' />
+            <input required value={projectName} onInput={(e) => { setProjectName((e.target as HTMLInputElement).value)}} type='text' placeholder='Enter a task' className='border-2 border-gray-300 rounded-lg p-2' />
         </span>
         <span className='flex gap-2'>
             <button onClick={() => setPriority(1)} className={`${priorityColor} bg-blue-500 text-white rounded-[5px 5px 5px 20px] p-2 w-5 h-5`}></button>
