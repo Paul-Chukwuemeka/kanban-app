@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-[#2C43DD] flex flex-col gap-10 items-center justify-start p-10 min-h-screen">
     <Context>
       {addTask && <TaskInput />}
-      <button className="p-2 border border-black rounded-lg w-full " onClick={() => setAddTask(!addTask)}>
+      <button className="p-2 border border-black rounded-lg w-1/2 bg-white font-bold text-xl  " onClick={() => setAddTask(!addTask)}>
         {addTask ? 'Close' : 'Add Task'}
       </button>
       <Main/>
